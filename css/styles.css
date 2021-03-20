@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Corporate-Logo";
+  src: url("../fonts/Corporate-Logo-Bold-ver2.ttf") format("TrueType");
+  /* font-weight: bold; */
+}
+
+/* @font-face {
+  font-family: "Corporate-Logo";
+  src: url("../fonts/Corporate-Logo-Medium-ver2.ttf") format("TrueType");
+  font-weight: normal;
+} */
+
+body {
+  margin: 0; 
+  font-family: Corporate-Logo, sans-serif;
+  background: #F6FB14;
+}
+
+body.initial > *{
+  display: none
+}
+
+.btn {
+  position: relative;
+  padding: 10px 15px 10px 45px;
+  margin: 0 30px;
+  border: 4px solid #000;
+  border-radius: 70px;
+  background: #F6FB14;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+}
+.btn::before {
+  position: absolute;
+  top: -15px;
+  left: -20px;
+  content: "";
+  display: inline-block;
+  background-image: url(../imgs/Balloons.png);
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  text-align: center;
+  padding: 40px 0;
+  margin: 80px 0;
+}
+
+section > h1::before {
+  position: relative;
+  top: -5px;
+  right: -5px;
+  content: "";
+  display: inline-block;
+  background-image: url(../imgs/Balloons.png);
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+/* header */
+body.initial header{
+  display: block;
+}
+body.initial header .header-noninitial{
+  display: none;
+}
+
+header .header-initial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+header .header-noninitial {
+  padding: 100px 0 300px;
+
+}
+
+header .logo {
+  display: block;
+  margin: 0 auto 60px;
+  width: 500px;
+}
+
+/* concept */
+#concept {
+  position: relative;
+  background: #fff;
+  transform: skewY(-12deg);
+  transform-origin: top left;
+}
+
+#concept .catch-copy h1,
+#concept .catch-copy h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#concept .catch-copy h1 {
+  top: -35px;
+  color: #fff;
+  font-size: 40px;
+}
+
+#concept .catch-copy h2 {
+  top: -23px;
+  font-size: 15px;
+}
+
+#concept p {
+  line-height: 1.5;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+#concept .highlight {
+  font-size: 18px;
+  background: linear-gradient(transparent 60%, #F6FB14 0%);
+}
+
+#concept .example {
+  height: 300px;
+}
+
+#concept .example img{
+  width: 150px;
+}
+
+#concept .example > div {
+  display: flex;
+  position: absolute;
+  bottom: -2px;
+}
+
+#concept .example > div p:last-child {
+  margin-left: 40px;
+}
+
+#concept .example .girl {
+  align-items: center;
+  left: 0;
+}
+#concept .example .boy {
+  align-items: top;
+  right: 0;
+}
+#concept .example .boy div {
+  margin-top: 50px;
+}
+
+/* about */
+#about {
+
+}
