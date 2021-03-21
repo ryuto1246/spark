@@ -60,14 +60,14 @@ section > h1 {
 }
 section > h1::before {
   position: relative;
-  top: -5px;
-  right: -5px;
+  top: -15px;
+  right: -15px;
   content: "";
   display: inline-block;
   background-image: url(../imgs/Balloons.png);
   background-size: contain;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   vertical-align: middle;
 }
 
@@ -174,13 +174,11 @@ header .logo {
 
 /* jobs */
 #jobs .job-items {
-  width: 500px;
-  margin: 70px auto 0;
-}
-
-#jobs .flex-row {
-  justify-content: space-between;
-  margin-top: 50px;
+  display: grid;
+  margin: 50px 0 0;
+  justify-content: center;
+  grid-template-rows: 230px 230px;
+  grid-template-columns: 200px 200px 200px;
 }
 
 #jobs .job-item  img{
@@ -245,6 +243,10 @@ header .logo {
 }
 
 /* merits */
+#merits {
+  margin-bottom: 300px;
+}
+
 #merits .merit-items {
   display: flex;
   justify-content: center;
@@ -268,4 +270,196 @@ header .logo {
 }
 #merits .merit-items .merit-item p {
   font-size: 15px;
+}
+
+/* questions */
+#questions .question-itmes {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 400px 400px;
+  gap: 50px 60px;
+  margin-top: 100px;
+}
+
+#questions .question,
+#questions .answer {
+  position: relative;
+  padding: 60px 50px 50px 90px;
+  border-radius: 20px;
+  background: #fff;
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#questions .answer::before,
+#questions .question::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+}
+
+#questions .question::before {
+  background-image: url(../imgs/question.png);
+}
+#questions .answer::before {
+  background-image: url(../imgs/exclamation_mark.png);
+}
+
+#questions .answer::after,
+#questions .question::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  background-image: url(../imgs/pointer.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+}
+
+#questions .question-item {
+  position: relative;
+  cursor: pointer;
+}
+#questions .question-item .answer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+#questions .question-item.turned .answer {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transition: 
+    opacity 100ms 150ms,
+    transform .3s .15s;
+}
+#questions .question-item.turned .question {
+  transform: rotateY(90deg);
+  opacity: 0;
+  transition: 
+    opacity 50ms 200ms,
+    transform .3s;
+}
+
+#questions .question-item:not(.turned) .answer {
+  transform: rotateY(90deg);
+  opacity: 0;
+  transition: 
+    opacity 50ms 200ms,
+    transform .3s;
+}
+#questions .question-item:not(.turned) .question {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transition: 
+    opacity 100ms 150ms,
+    transform .3s .15s;
+}
+
+/* seniors */
+#seniors .senior-items {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 220px 220px 220px;
+  gap: 50px;
+}
+
+#seniors .senior-item {
+  background: #fff;
+  border-radius: 25%;
+  padding: 20px;
+}
+
+#seniors .senior-item p {
+  font-size: 6px;
+  margin-top: 15px;
+}
+
+#seniors .senior-item h1 {
+  font-size: 15px;
+  margin: 0;
+}
+
+#seniors .senior-item img {
+  width: 180px;
+}
+
+/* join */
+#join {
+  transform: skewY(-12deg);
+  transform-origin: top left;
+  background: #d0d0d0;
+  margin-top: 500px;
+  padding: 220px 0 50px;
+}
+
+#join > *{
+  transform: skewY(12deg);
+  transform-origin: top right;
+}
+
+#join .line {
+  width: 500px;
+  padding: 40px;
+  margin: 50px auto 0;
+  border-radius: 30px;
+  background: #fff;
+}
+
+#join .line img {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+#join a.join-btn {
+  display: block;
+  width: 800px;
+  margin: 50px auto 0;
+  background: #00B900;
+  border: 4px solid #fff;
+  border-radius: 60px;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+#contact a.contact-btn {
+  display: block;
+  width: 800px;
+  margin: 50px auto 0;
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 60px;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+}
+
+/* footer */
+footer {
+  position: relative;
+  height: 200px;
+  background: #000;
+}
+
+footer .back-to-top {
+  position: absolute;
+  padding: 10px 40px 20px;
+  top: -30px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
 }
