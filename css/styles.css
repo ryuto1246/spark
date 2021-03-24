@@ -57,6 +57,7 @@ section {
 
 section > h1 {
   font-size: 35px;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, .6);
 }
 section > h1::before {
   position: relative;
@@ -69,6 +70,7 @@ section > h1::before {
   width: 80px;
   height: 80px;
   vertical-align: middle;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .6));
 }
 
 p {
@@ -80,6 +82,13 @@ p {
 .highlight {
   font-size: 25px;
   background: linear-gradient(transparent 60%, #F6FB14 0%);
+}
+
+body.company .stu {
+  display: none !important;
+}
+body.students .com {
+  display: none !important;
 }
 
 /* header */
@@ -198,8 +207,95 @@ header .logo {
   text-decoration: none;
 }
 
-/* companies */
+/* merits-for-com */
+#merits-for-com {
+  padding-top: 250px;
+  padding-bottom: 150px;
+  background: #fff;
+  transform: skewY(12deg);
+  transform-origin: top left;
+  margin-bottom: 0;
+}
 
+#merits-for-com > h1{
+  margin-bottom: -30px;
+  transform: skewY(-12deg);
+  transform-origin: top left;
+}
+
+/* risks */
+#risks {
+  background: #000;
+  transform: skewY(12deg);
+  transform-origin: top left;
+  margin-top: 0;
+  padding: 250px 0 100px;
+  margin-bottom: 500px;
+}
+
+#risks > section {
+  transform: skewY(-12deg);
+  transform-origin: top left;
+  color: #fff;
+}
+
+#risks > section {
+  margin: 0;
+}
+
+#risks > section > h1::before {
+  background-image: url("../imgs/Balloons-white.png");
+}
+
+#risks .risk-item {
+  margin: 0 30px;
+}
+
+#risks .risks-img {
+  display: flex;
+  transform: rotate(45deg);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px;
+  border: 4px solid #fff;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+#risks .risks-img img {
+  width: 100px;
+  transform: rotate(-45deg);
+}
+
+#risks .risks-img p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 10px 0;
+  background: #fff;
+  color: #000;
+  overflow: hidden;
+}
+
+#risks .risks-btn {
+  display: block;
+  width: 800px;
+  margin: 50px auto 0;
+  background: #000;
+  border: 4px solid #F6FB14;
+  border-radius: 60px;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+/* companies */
 @keyframes loop-slide {
   from {
     transform: translateX(0);
@@ -242,33 +338,39 @@ header .logo {
   width: 70px;
 }
 
-/* merits */
-#merits {
+/* merits-for-stu */
+#merits-for-stu {
   margin-bottom: 300px;
 }
 
-#merits .merit-items {
-  display: flex;
-  justify-content: center;
+#merits-for-com .merit-items,
+#merits-for-stu .merit-items {
   padding: 50px 0 15px;
+}
+
+#merits-for-stu .merit-items {
   background: #fff;
   transform: skewY(12deg);
   transform-origin: top left;
 }
 
-#merits .merit-items .merit-item {
+#merits-for-com .merit-items .merit-item,
+#merits-for-stu .merit-items .merit-item {
   transform: skewY(-12deg);
   transform-origin: top left;
   margin: 0 30px;
 }
 
-#merits .merit-items .merit-item img {
+#merits-for-com .merit-items .merit-item img,
+#merits-for-stu .merit-items .merit-item img {
   width: 70px;
 }
-#merits .merit-items .merit-item h1 {
+#merits-for-com .merit-items .merit-item h1
+#merits-for-stu .merit-items .merit-item h1 {
   font-size: 21px;
 }
-#merits .merit-items .merit-item p {
+#merits-for-com .merit-items .merit-item p,
+#merits-for-stu .merit-items .merit-item p {
   font-size: 15px;
 }
 
@@ -407,7 +509,7 @@ header .logo {
   transform-origin: top right;
 }
 
-#join .line {
+#join .join {
   width: 500px;
   padding: 40px;
   margin: 50px auto 0;
@@ -415,9 +517,9 @@ header .logo {
   background: #fff;
 }
 
-#join .line img {
-  width: 300px;
-  margin-bottom: 30px;
+#join .join img {
+  height: 100px;
+  margin: 0 30px 30px;
 }
 
 #join a.join-btn {
@@ -433,6 +535,63 @@ header .logo {
   font-size: 25px;
 }
 
+#join a.join-btn.com {
+  background: #F6FB14;
+  border-color: #000;
+  color: #000
+}
+
+/* operation companies */
+#operate .ope-com {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50px 300px 300px;
+  grid-template-rows: 50px 50px;
+  margin: 50px 0;
+}
+
+#operate .ope-com.spark {
+  grid-template-areas: 
+      "logo logo name"
+      "logo logo link";
+}
+#operate .ope-com.bau {
+  grid-template-areas: 
+      "cooporate logo name"
+      "cooporate logo link";
+}
+
+#operate .ope-com p:not(.cooporate) {
+  text-align: left;
+  margin-left: 50px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+#operate .ope-com a {
+  text-decoration: underline;
+  color: #000;
+}
+
+#operate .ope-com .cooporate {
+  grid-area: cooporate;
+  writing-mode: vertical-rl;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+#operate .ope-com .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  grid-area: logo;
+  background: #fff;
+}
+#operate .ope-com .logo img {
+  height: 80px;
+}
+
+/* contact */
 #contact a.contact-btn {
   display: block;
   width: 800px;
