@@ -1,0 +1,292 @@
+@media screen and (max-width: 700px) {
+  .flex-row {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .btn {
+    box-sizing: border-box;
+    font-size: 12px;
+    width: 220px;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .btn::before {
+    width: 70px;
+    height: 70px;
+  }
+
+  section > h1 {
+    font-size: 19px;
+  }
+  section > h1::before {
+    top: -8px;
+    right: -8px;
+    width: 50px;
+    height: 50px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .highlight {
+    font-size: 16px;
+  }
+
+  /* header */
+  header .logo {
+    width: 300px;
+  }
+
+  header .header-noninitial {
+    padding-bottom: 200px;
+  }
+
+/* concept */
+  #concept .catch-copy h1 {
+    top: -62px;
+    font-size: 32px;
+  }
+
+  #concept .catch-copy h2 {
+    top: -37px;
+    font-size: 16px;
+  }
+
+  #concept .example {
+    height: 180px;
+  }
+
+  #concept .example p {
+    font-size: 10px;
+  }
+
+  #concept .example img{
+    width: 100px;
+  }
+
+  #concept .example .boy div {
+    margin-top: 0;
+  }
+
+  /* about */
+  #about img {
+    width: 300px;
+  }
+
+  /* jobs */
+  #jobs .job-items {
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 150px 150px;
+  }
+
+  #jobs .job-item  img{
+    width: 50px;
+  }
+
+  #jobs .job-item p {
+    font-size: 12px;
+  }
+  
+  #jobs .job-item a {
+    font-size: 8px;
+  }
+
+  /* risks */
+  #risks {
+    margin-bottom: 100px;
+  }
+
+  #risks .risks-btn {
+    width: 250px;
+    font-size: 18px;
+  }
+
+  #risks .risk-item {
+    margin-bottom: 20px;
+  }
+
+  /* companies */
+  #companies .slides .slide-item {
+    width: 50px;
+    height: 50px;
+    margin: 0 8px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+  }
+
+  #merits-for-com .merit-items .merit-item img,
+  #merits-for-stu .merit-items .merit-item img {
+    width: 50px;
+    margin-top: 20px;
+  }
+  #merits-for-com .merit-items .merit-item h1,
+  #merits-for-stu .merit-items .merit-item h1 {
+    font-size: 18px;
+  }
+  #merits-for-com .merit-items .merit-item p,
+  #merits-for-stu .merit-items .merit-item p {
+    font-size: 12px;
+  }
+
+  /* questions */
+  #questions .question-itmes {
+    display: grid;
+    grid-template-columns: 250px;
+    gap: 40px;
+  }
+
+  #questions .question,
+  #questions .answer {
+    padding: 40px;
+  }
+
+  #questions .answer::before,
+  #questions .question::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  #questions .answer::after,
+  #questions .question::after {
+    bottom: 5px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* seniors */
+  #seniors .senior-items {
+    grid-template-columns: 180px;
+    grid-template-rows: 180px 180px 180px;
+  }
+
+  #seniors .senior-item {
+    padding: 15px;
+  }
+
+  #seniors .senior-item img {
+    width: 150px;
+  }
+
+  /* join */
+  #join {
+    margin-top: 200px;
+    padding-top: 100px;
+  }
+
+  #join .join {
+    width: 200px;
+  }
+
+  #join .join img {
+    height: 50px;
+  }
+
+  #join a.join-btn {
+    width: 250px;
+    font-size: 18px;
+  }
+
+  /* operation companies */
+  #operate .ope-com {
+    grid-template-columns: 35px 200px;
+    grid-template-rows: 35px 50px 35px 35px;
+  }
+
+  #operate .ope-com.spark {
+    grid-template-areas: 
+        "logo logo"
+        "logo logo"
+        "name name"
+        "link link";
+  }
+
+  #operate .ope-com.bau {
+    grid-template-areas: 
+        "cooporate logo"
+        "cooporate logo"
+        "name name"
+        "link link";
+  }
+
+  #operate .ope-com p:not(.cooporate) {
+    text-align: center;
+    margin-left: 0;
+    font-size: 15px;
+    line-height: 35px;
+  }
+
+  #operate .ope-com .logo img {
+    height: 60px;
+  }
+  
+  /* contact */
+  #contact a.contact-btn {
+    width: 300px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .btn {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #concept .catch-copy h1 {
+    top: -85px;
+    font-size: 50px;
+    line-height: .9;
+  }
+  
+  #concept .catch-copy h2 {
+    top: -48px;
+  }
+
+  /* about */
+  #about img {
+    width: 600px;
+  }
+
+  /* risks */
+  #risks {
+    margin-bottom: 100px;
+  }
+
+  #risks .risks-btn {
+    width: 250px;
+    font-size: 18px;
+  }
+
+  #risks .risk-item {
+    margin-bottom: 20px;
+  }
+
+  #risks .risks-btn {
+    width: 600px;
+  }
+
+  #seniors .senior-items {
+    grid-template-columns: 200px 200px 200px;
+  
+    gap: 30px
+  }
+
+  #seniors .senior-item img {
+    width: 160px;
+  }
+
+  #join a.join-btn {
+    width: 600px;
+  }
+
+  #contact a.contact-btn {
+    width: 600px;
+  }
+}

@@ -135,7 +135,6 @@ header .header-initial {
 
 header .header-noninitial {
   padding: 100px 0 300px;
-
 }
 
 header .logo {
@@ -169,6 +168,7 @@ header .logo {
 #concept .catch-copy h2 {
   top: -27px;
   font-size: 18px;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, .6);
 }
 
 
@@ -226,6 +226,7 @@ header .logo {
 
 #jobs .job-item p {
   font-size: 13px;
+  line-height: 1.2;
 }
 
 #jobs .job-item a {
@@ -275,7 +276,7 @@ header .logo {
 }
 
 #risks .risk-item {
-  margin: 0 30px;
+  margin: 0 20px;
 }
 
 #risks .risks-img {
@@ -284,8 +285,8 @@ header .logo {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   margin: 0 auto 30px;
   border: 4px solid #fff;
   border-radius: 100%;
@@ -392,7 +393,7 @@ header .logo {
 #merits-for-stu .merit-items .merit-item img {
   width: 70px;
 }
-#merits-for-com .merit-items .merit-item h1
+#merits-for-com .merit-items .merit-item h1,
 #merits-for-stu .merit-items .merit-item h1 {
   font-size: 21px;
 }
@@ -575,7 +576,7 @@ header .logo {
 #operate .ope-com {
   display: grid;
   justify-content: center;
-  grid-template-columns: 50px 300px 300px;
+  grid-template-columns: 50px 300px 240px;
   grid-template-rows: 50px 50px;
   margin: 50px 0;
 }
@@ -591,12 +592,16 @@ header .logo {
       "cooporate logo link";
 }
 
+#operate .ope-com p.company-name { grid-area: name; }
+#operate .ope-com p.company-link { grid-area: link; }
+
 #operate .ope-com p:not(.cooporate) {
   text-align: left;
   margin-left: 50px;
   font-size: 20px;
   vertical-align: middle;
 }
+
 #operate .ope-com a {
   text-decoration: underline;
   color: #000;
